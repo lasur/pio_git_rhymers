@@ -8,6 +8,10 @@ public class DefaultCountingOutRhymer {
     private final int[] NUMBERS = new int[SIZE];
 
     public int total = RETURN_NUMBER;
+    public int getTotal() {
+        return total;
+    }
+
 
     public void countIn(int in) {
         if (!isFull())
@@ -16,13 +20,12 @@ public class DefaultCountingOutRhymer {
 
     public boolean callCheck() {
         return total == RETURN_NUMBER;
-    }
 
-    public boolean isFull() {
+    boolean isFull() {
         return total == 11;
     }
 
-    protected int peekaboo() {
+    int peekaboo() {
         if (callCheck())
             return RETURN_NUMBER;
         return NUMBERS[total];
