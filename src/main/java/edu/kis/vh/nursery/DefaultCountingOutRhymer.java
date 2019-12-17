@@ -8,6 +8,7 @@ public class DefaultCountingOutRhymer {
     private final int[] NUMBERS = new int[SIZE];
 
     public int total = RETURN_NUMBER;
+
     public int getTotal() {
         return total;
     }
@@ -20,21 +21,21 @@ public class DefaultCountingOutRhymer {
 
     public boolean callCheck() {
         return total == RETURN_NUMBER;
+    }
+        boolean isFull () {
+            return total == 11;
+        }
 
-    boolean isFull() {
-        return total == 11;
+        int peekaboo () {
+            if (callCheck())
+                return RETURN_NUMBER;
+            return NUMBERS[total];
+        }
+
+        public int countOut () {
+            if (callCheck())
+                return RETURN_NUMBER;
+            return NUMBERS[total--];
+        }
     }
 
-    int peekaboo() {
-        if (callCheck())
-            return RETURN_NUMBER;
-        return NUMBERS[total];
-    }
-
-    public int countOut() {
-        if (callCheck())
-            return RETURN_NUMBER;
-        return NUMBERS[total--];
-    }
-
-}
