@@ -1,30 +1,39 @@
 package edu.kis.vh.nursery.factory;
 
-import edu.kis.vh.nursery.defaultCountingOutRhymer;
+import edu.kis.vh.nursery.DefaultCountingOutRhymer;
 import edu.kis.vh.nursery.FIFORhymer;
 import edu.kis.vh.nursery.HanoiRhymer;
-import edu.kis.vh.nursery.factory.Rhymersfactory;
-
+/**
+ * Klasa tworzy konkretne obiekty klas dzidziczących z DefaultCountingOutRhymer
+ */
 public class DefaultRhymersFactory implements Rhymersfactory {
-
-	@Override
-	public defaultCountingOutRhymer GetStandardRhymer() {
-		return new defaultCountingOutRhymer();
-	}
-
-	@Override
-	public defaultCountingOutRhymer GetFalseRhymer() {
-		return new defaultCountingOutRhymer();
-	}
-
-	@Override
-	public defaultCountingOutRhymer GetFIFORhymer() {
-		return new FIFORhymer();
-	}
-
-	@Override
-	public defaultCountingOutRhymer GetHanoiRhymer() {
-		return new HanoiRhymer();
-	}
+    /**
+     * @return zwraca nowy obiekt klasy DefaultCountingOutRhymer
+     */
+    @Override
+    public DefaultCountingOutRhymer getStandardRhymer() {
+        return new DefaultCountingOutRhymer();
+    }
+    /**
+     * @return zwraca nowy obiekt klasy DefaultCountingOutRhymer
+     */
+    @Override
+    public DefaultCountingOutRhymer getFalseRhymer() {
+        return new DefaultCountingOutRhymer();
+    }
+    /**
+     * @return zwraca nowy obiekt klasy FIFORhymer
+     */
+    @Override
+    public DefaultCountingOutRhymer getFIFORhymer() {
+        return new FIFORhymer();
+    }
+    /**
+     * @return zwraca nowy obiekt klasy HanoiRhymer
+     */
+    @Override
+    public DefaultCountingOutRhymer getHanoiRhymer() {
+        return new HanoiRhymer();
+    }
 
 }
